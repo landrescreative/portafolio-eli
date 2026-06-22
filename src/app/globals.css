@@ -1,3 +1,28 @@
+/* Local Bell MT Font Faces */
+@font-face {
+  font-family: 'Bell MT';
+  src: url('/fonts/BELL.TTF') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bell MT';
+  src: url('/fonts/BELLB.TTF') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bell MT';
+  src: url('/fonts/BELLI.TTF') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   /* Colors - Sophisticated Elegant Pastel & Plum Palette */
   --primary: #d654cc; /* Sophisticated magenta/rose */
