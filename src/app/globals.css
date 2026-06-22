@@ -17,8 +17,8 @@
   --text-muted: #8c7a8e;
   
   /* Typography */
-  --font-serif: var(--font-serif), 'Cormorant Garamond', serif;
-  --font-sans: var(--font-sans), 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Bell MT', 'Times New Roman', Times, serif;
+  --font-sans: 'Bell MT', 'Times New Roman', Times, serif;
   
   /* Radius & Shadows - Refined and soft */
   --radius-sm: 8px;
