@@ -1,0 +1,224 @@
+.recognitionsSection {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+  transform: translateX(-50%);
+  opacity: 0.25;
+}
+
+.timelineItem {
+  position: relative;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.left {
+  align-self: flex-start;
+  padding-right: 45px;
+}
+
+.right {
+  align-self: flex-end;
+  padding-left: 45px;
+}
+
+.timelineBadge {
+  position: absolute;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  z-index: 10;
+}
+
+.left .timelineBadge {
+  right: 0;
+  left: auto;
+  transform: translate(50%, -50%);
+}
+
+.right .timelineBadge {
+  left: 0;
+  right: auto;
+  transform: translate(-50%, -50%);
+}
+
+.timelineCard {
+  padding: 32px;
+  border: 1px solid var(--card-border);
+}
+
+.timelineCard:hover {
+  border-color: rgba(214, 84, 204, 0.25);
+}
+
+.cardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.dateBadge,
+.typeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.dateBadge {
+  background: rgba(166, 232, 247, 0.25);
+  color: var(--secondary);
+  border: 1px solid rgba(166, 232, 247, 0.2);
+}
+
+.typeBadge {
+  background: rgba(250, 224, 252, 0.35);
+  color: var(--primary);
+  border: 1px solid rgba(250, 224, 252, 0.2);
+}
+
+.cardTitle {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  font-family: var(--font-serif);
+}
+
+.cardSubtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.achievementBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, rgba(166, 232, 247, 0.1) 0%, rgba(223, 103, 229, 0.1) 100%);
+  border: 1px solid rgba(214, 84, 204, 0.15);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.trophyIcon {
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .timelineLine {
+    left: 20px;
+    transform: none;
+  }
+  
+  .timelineItem {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .left,
+  .right {
+    align-self: flex-start;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  
+  .timelineBadge {
+    left: 20px;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  
+  .timelineCard {
+    padding: 24px;
+  }
+  
+  .cardTitle {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .left,
+  .right {
+    padding-left: 36px;
+  }
+  
+  .timelineLine {
+    left: 14px;
+  }
+  
+  .timelineBadge {
+    left: 14px;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .timelineCard {
+    padding: 20px 16px;
+  }
+  
+  .cardTitle {
+    font-size: 1.22rem;
+  }
+  
+  .cardSubtitle {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .cardDescription {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+  
+  .achievementBadge {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,93 @@
+.servicesSection {
+  position: relative;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.serviceCard {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  border: 1px solid var(--card-border);
+}
+
+.iconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(166, 232, 247, 0.2) 0%, rgba(250, 224, 252, 0.3) 100%);
+  color: var(--primary);
+  border: 1px solid rgba(214, 84, 204, 0.1);
+  transition: all var(--transition-fast);
+}
+
+.serviceCard:hover .iconWrapper {
+  background: linear-gradient(135deg, var(--secondary-light) 0%, var(--primary) 100%);
+  color: #ffffff;
+  transform: rotate(3deg) scale(1.03);
+  box-shadow: 0 4px 15px rgba(214, 84, 204, 0.15);
+  border-color: transparent;
+}
+
+.serviceTitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+}
+
+.serviceDescription {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.benefitsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  border-top: 1px solid var(--card-border);
+  padding-top: 20px;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.checkmark {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .serviceCard {
+    padding: 30px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .serviceCard {
+    padding: 24px 20px;
+  }
+}

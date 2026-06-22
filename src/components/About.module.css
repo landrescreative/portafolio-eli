@@ -1,0 +1,302 @@
+.aboutSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.layoutContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: stretch;
+}
+
+.identityCard {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.brandBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  background: linear-gradient(135deg, rgba(214, 84, 204, 0.1) 0%, rgba(166, 232, 247, 0.1) 100%);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  border: 1px solid rgba(214, 84, 204, 0.15);
+  letter-spacing: 1px;
+}
+
+.brandTitle {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+}
+
+.brandSubtitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  margin-top: -16px;
+}
+
+.identityText {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent 0%, var(--card-border) 50%, transparent 100%);
+  margin: 10px 0;
+}
+
+.plansSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plansTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+}
+
+.plansIcon {
+  color: var(--primary);
+}
+
+.plansText {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Tab controls - Added horizontal scroll on mobile */
+.interactiveArea {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tabsList {
+  display: flex;
+  padding: 5px;
+  border-radius: 50px;
+  justify-content: space-between;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.tabsList::-webkit-scrollbar {
+  display: none;
+}
+
+.tabBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 40px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-sans);
+  min-width: max-content;
+}
+
+.tabBtn:hover {
+  color: var(--primary);
+}
+
+.activeTab {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(214, 84, 204, 0.15);
+}
+
+.tabContent {
+  flex: 1;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panelTitle {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+}
+
+.panelText {
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.panelText strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.statCard {
+  padding: 24px;
+  text-align: center;
+}
+
+.statNum {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--font-serif);
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.groupsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.groupTitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skillTag {
+  padding: 6px 14px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.interestsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.interestItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px;
+}
+
+.interestBullet {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.interestItem span {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Animations */
+.fadeIn {
+  animation: scaleUp 0.4s ease-out forwards;
+}
+
+@media (max-width: 1024px) {
+  .layoutContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .identityCard {
+    padding: 30px 20px;
+  }
+  
+  .interestsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabBtn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .identityCard {
+    padding: 24px 16px;
+  }
+  
+  .brandTitle {
+    font-size: 2.1rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .tabContent {
+    padding: 0 4px;
+  }
+}
