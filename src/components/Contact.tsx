@@ -22,12 +22,11 @@ export default function Contact() {
     }
 
     setStatus("loading");
-    
-    // Obtiene el ID del formulario de las variables de entorno o usa un fallback editable
-    const formspreeFormId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID || "xzzpqrza"; // <-- Reemplaza 'xzzpqrza' con tu ID de Formspree
+    // Usamos Formsubmit para no requerir configuración extra
+    const contactEmail = "aquinovilledaelizabeth@gmail.com";
 
     try {
-      const response = await fetch(`https://formspree.io/f/${formspreeFormId}`, {
+      const response = await fetch(`https://formsubmit.co/ajax/${contactEmail}`, {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -38,6 +37,7 @@ export default function Contact() {
           correo: email,
           asunto: subject,
           mensaje: message,
+          _subject: subject || "Nuevo mensaje desde el Portafolio",
         }),
       });
 
