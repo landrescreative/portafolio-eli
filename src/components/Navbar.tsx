@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Palette } from "lucide-react";
 import styles from "./Navbar.module.css";
@@ -34,7 +35,13 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""} glass-container`}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
-          <Palette className={styles.logoIcon} size={20} />
+          <Image 
+            src="/images/logo.jpeg" 
+            alt="Logo SINOMBREAZUL" 
+            width={32} 
+            height={32} 
+            style={{ borderRadius: '50%', objectFit: 'cover' }} 
+          />
           <span className={styles.logoText}>
             Elizabeth <span className={styles.logoLastName}>Aquino Villeda</span>
           </span>

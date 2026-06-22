@@ -39,7 +39,7 @@ export default function Hero() {
             <div className={styles.circleBg}></div>
             <div className={styles.imageContainer}>
               <Image
-                src="/images/whatsapp.jpeg"
+                src="/images/logo.jpeg"
                 alt="Elizabeth Aquino Villeda - Arte Digital"
                 width={400}
                 height={400}
